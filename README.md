@@ -16,9 +16,8 @@
  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
 ```
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![YAML](https://img.shields.io/badge/YAML-1.2-green.svg)](https://yaml.org/)
-[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://python.org/)
+![YAML](https://img.shields.io/badge/YAML-1.2-green.svg)
+![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)
 
 > A community-driven library of production-ready AI agent system prompts for healthcare and life sciences, built on the [Corti Agentic Framework](https://www.corti.ai/agentic-framework).
 
@@ -28,11 +27,7 @@
 - [Key Features](#-key-features)
 - [Repository Structure](#-repository-structure)
 - [Quick Start](#-quick-start)
-- [Agent Schema Reference](#-agent-schema-reference)
-- [Available Agents](#-available-agents)
 - [Contributing](#-contributing-to-the-library)
-- [Validation Tool](#-validation-tool-documentation)
-- [Resources](#-resources)
 - [Security and Privacy](#-security-and-privacy)
 
 ## 🏥 About This Repository
