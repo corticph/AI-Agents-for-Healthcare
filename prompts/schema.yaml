@@ -1,0 +1,26 @@
+# Base YAML Schema for Corti Agentic Framework Agent Configurations
+# All agent YAML files should follow this structure
+
+version: "1.0.0"  # Prompt version
+agent_name: ""     # e.g., "Medical Coding Agent"
+builder: ""        # e.g., "Corti" - Organization or person who built this agent
+
+description:
+  overview: ""     # Brief overview of what the agent does
+
+  how_it_works:
+    configuration_requirements: []  # List of required configurations
+    execution_flow: []              # Step-by-step execution flow
+
+  use_cases: []    # List of typical use cases
+
+  category: ""     # e.g., "Coding and Revenue Cycle", "Clinical Evidence and Research", etc.
+
+system_prompt: ""  # The system prompt that defines the agent's role and behavior
+
+supported_experts: []  # List of expert configuration names that this agent supports
+                       # Example: ["web-search-expert", "coding-expert"]
+
+expert_prompts: {}  # Optional: Specific experts (key-value pairs)
+  # If an expert needs a different prompt, add it here:
+  # web-search-expert: "Custom prompt for searching..."
