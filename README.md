@@ -1,4 +1,3 @@
-# Corti Agents - Healthcare AI Agent System Prompts Library
 
 ```
   ██████╗ ██████╗ ██████╗ ████████╗██╗
