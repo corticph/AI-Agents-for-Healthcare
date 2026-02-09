@@ -57,7 +57,6 @@ This repository contains the **system prompts** that power these intelligent age
 - 🤖 **Production-Ready Agents**: Field-tested prompts for medical coding, clinical intelligence, and administrative tasks
 - 📋 **Standardized Format**: Consistent YAML schema across all agent configurations
 - 📚 **Comprehensive Documentation**: Detailed descriptions, use cases, and execution flows for each agent
-- 🔍 **Expert Integration**: Pre-configured support for coding experts, medical calculators, PubMed search, and more
 - ✅ **Quality Assurance**: All prompts validated for syntax, structure, and readability
 
 ### For Contributors
@@ -86,7 +85,7 @@ corti-agents/
 
 1. **Browse Available Agents**: Explore the `prompts/` directory for production-ready agent configurations
 2. **Select an Agent**: Choose an agent that matches your use case (e.g., medical coding, clinical documentation)
-3. **Integrate with Framework**: Use these prompts with the Corti Agentic Framework or your own agent infrastructure
+3. **Integrate with Framework**: Use these prompts with the Corti Agentic Framework by integrating directly with the Corti API (docs.corti.ai) or on the Console (console.corti.app)
 4. **Customize as Needed**: Adapt prompts to your specific requirements while maintaining the schema structure
 
 ### For Contributors
