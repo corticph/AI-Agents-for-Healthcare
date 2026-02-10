@@ -11,75 +11,21 @@ and performs comprehensive formatting checks including:
 - Structural integrity
 """
 
-import os
 import sys
-import time
 import yaml
 from pathlib import Path
-from typing import Dict, List, Tuple, Any
+from typing import Dict, List, Any
 import re
 
 
 class Colors:
     """ANSI color codes for terminal output"""
-    HEADER = '\033[95m'
-    BLUE = '\033[94m'
     CYAN = '\033[96m'
     GREEN = '\033[92m'
     YELLOW = '\033[93m'
     RED = '\033[91m'
     ENDC = '\033[0m'
     BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-
-
-def clear_screen():
-    """Clear the terminal screen"""
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-
-def animate_loading(duration: float = 1.5):
-    """Display animated ASCII art loading screen"""
-    ascii_art = r"""
-╔═══════════════════════════════════════════════════════════════════════╗
-║                                                                       ║
-║      ██████╗ ██████╗ ██████╗ ████████╗██╗                           ║
-║     ██╔════╝██╔═══██╗██╔══██╗╚══██╔══╝██║                           ║
-║     ██║     ██║   ██║██████╔╝   ██║   ██║                           ║
-║     ██║     ██║   ██║██╔══██╗   ██║   ██║                           ║
-║     ╚██████╗╚██████╔╝██║  ██║   ██║   ██║                           ║
-║      ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝                           ║
-║                                                                       ║
-║   ██╗   ██╗ █████╗ ██╗     ██╗██████╗  █████╗ ████████╗ ██████╗ ██████╗ ║
-║   ██║   ██║██╔══██╗██║     ██║██╔══██╗██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗║
-║   ██║   ██║███████║██║     ██║██║  ██║███████║   ██║   ██║   ██║██████╔╝║
-║   ╚██╗ ██╔╝██╔══██║██║     ██║██║  ██║██╔══██║   ██║   ██║   ██║██╔══██╗║
-║    ╚████╔╝ ██║  ██║███████╗██║██████╔╝██║  ██║   ██║   ╚██████╔╝██║  ██║║
-║     ╚═══╝  ╚═╝  ╚═╝╚══════╝╚═╝╚═════╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝║
-║                                                                       ║
-╚═══════════════════════════════════════════════════════════════════════╝
-"""
-
-    clear_screen()
-    print(Colors.CYAN + ascii_art + Colors.ENDC)
-
-    # Animated loading bar
-    print("\n")
-    bar_length = 60
-    loading_text = "Initializing Validator"
-    print(f"{' ' * 10}{Colors.BOLD}{loading_text}{Colors.ENDC}")
-    print(f"{' ' * 10}", end='')
-
-    steps = 25
-    for i in range(steps + 1):
-        progress = i / steps
-        filled = int(bar_length * progress)
-        bar = '█' * filled + '░' * (bar_length - filled)
-        print(f"\r{' ' * 10}[{Colors.GREEN}{bar}{Colors.ENDC}] {int(progress * 100)}%", end='', flush=True)
-        time.sleep(duration / steps)
-
-    print("\n" * 2)
-    time.sleep(0.2)
 
 
 class PromptValidator:
